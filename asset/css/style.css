@@ -1,0 +1,499 @@
+@font-face {
+    font-family: 'Source Serif Pro';
+    src: url('asset/sourceserifpro-bold.ttf') format('truetype');
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* preloader */
+.content {
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
+
+.content h1 {
+    color: #107e3e;
+}
+
+.page-loaded .content {
+    display: block;
+}
+
+.preloader {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0);
+    background: #f9f9f9;
+}
+
+.preloader h1 {
+    z-index: 15;
+    margin-top: 15rem;
+    display: flex;
+    font-family: 'Source Serif Pro', serif;
+    background: linear-gradient(to right, #107e3e, #095f46);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*  masjid */
+.mosque {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 15;
+    animation: mosque-animation 3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.mosque-base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 80px;
+    background: #107e3e;
+    border-radius: 5px 5px 0 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Kubah utama */
+.dome-main {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 35px;
+    background: #0d6e35;
+    border-radius: 35px 35px 0 0;
+    z-index: 12;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Kubah kecil */
+.dome-small {
+    position: absolute;
+    bottom: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 25px;
+    background: #85c226;
+    border-radius: 10px 10px 0 0;
+    z-index: 13;
+}
+
+.crescent {
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    z-index: 14;
+    animation: crescent-rotate 2s ease-in-out infinite;
+}
+
+.crescent:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #ffcc00;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Menara kiri */
+.minaret-left {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: 20px;
+    height: 110px;
+    background: #107e3e;
+    border-radius: 3px 3px 0 0;
+    z-index: 11;
+    box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Kubah menara kiri */
+.minaret-left:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 20px;
+    height: 10px;
+    background: #0d6e35;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Menara kanan */
+.minaret-right {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    width: 20px;
+    height: 110px;
+    background: #107e3e;
+    border-radius: 3px 3px 0 0;
+    z-index: 11;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Kubah menara kanan */
+.minaret-right:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 20px;
+    height: 10px;
+    background: #0d6e35;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Pintu masjid */
+.door {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 40px;
+    background: #ffcc00;
+    border-radius: 15px 15px 0 0;
+    z-index: 11;
+    animation: door-glow 2s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+/* Jendela kiri */
+.window-left {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    width: 15px;
+    height: 20px;
+    background: #ffcc00;
+    border-radius: 7px 7px 0 0;
+    z-index: 11;
+    animation: window-glow 2s ease-in-out infinite;
+    animation-delay: 0.3s;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+/* Jendela kanan */
+.window-right {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    width: 15px;
+    height: 20px;
+    background: #ffcc00;
+    border-radius: 7px 7px 0 0;
+    z-index: 11;
+    animation: window-glow 2s ease-in-out infinite;
+    animation-delay: 0.6s;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+@keyframes mosque-animation {
+
+    0%,
+    100% {
+        width: 160px;
+        height: 160px;
+        margin-top: -80px;
+        margin-left: -80px;
+        transform: translate(0, 0) scale(1);
+    }
+
+    30%,
+    36% {
+        width: 120px;
+        height: 180px;
+        margin-top: -90px;
+        margin-left: -60px;
+        transform: translate(0, 0) scale(0.9);
+    }
+
+    63%,
+    69% {
+        width: 80px;
+        height: 140px;
+        margin-top: -70px;
+        margin-left: -40px;
+        transform: translate(0, 0) scale(0.8);
+    }
+}
+
+@keyframes door-glow {
+
+    0%,
+    100% {
+        background: #ffcc00;
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+    }
+
+    50% {
+        background: #ffd633;
+        box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
+    }
+}
+
+@keyframes window-glow {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    }
+
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+    }
+}
+
+@keyframes crescent-rotate {
+
+    0%,
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(30deg);
+    }
+}
+
+.page-loaded .preloader .mosque {
+    opacity: 0;
+}
+
+.preloader:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 0;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: all 800ms ease;
+    -moz-transition: all 800ms ease;
+    -ms-transition: all 800ms ease;
+    -o-transition: all 800ms ease;
+    transition: all 800ms ease;
+}
+
+.page-loaded .preloader:before {
+    -webkit-transform: translateX(-101%);
+    -ms-transform: translateX(-101%);
+    transform: translateX(-101%);
+}
+
+.preloader:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #107e3e;
+    z-index: 2;
+    -webkit-transform: translateX(101%);
+    -ms-transform: translateX(101%);
+    transform: translateX(101%);
+    -webkit-transition: all 800ms ease;
+    -moz-transition: all 800ms ease;
+    -ms-transition: all 800ms ease;
+    -o-transition: all 800ms ease;
+    transition: all 800ms ease;
+}
+
+.page-loaded .preloader:after {
+    -webkit-transform: translateX(-101%);
+    -ms-transform: translateX(-101%);
+    transform: translateX(-101%);
+}
+
+.islamic-text {
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    text-align: center;
+    color: #107e3e;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 15;
+    opacity: 1;
+    animation: text-glow 2s ease-in-out infinite;
+}
+
+.group-text {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    color: #0d6e35;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 15;
+    opacity: 1;
+    animation: group-text-animation 3s ease-in-out infinite;
+}
+
+@keyframes text-glow {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        text-shadow: 0 0 5px rgba(16, 126, 62, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(16, 126, 62, 0.6);
+    }
+}
+
+@keyframes group-text-animation {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+        text-shadow: 0 0 5px rgba(13, 110, 53, 0.5);
+    }
+
+    25% {
+        transform: scale(1.1);
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(13, 110, 53, 0.8);
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 0.9;
+        text-shadow: 0 0 10px rgba(13, 110, 53, 0.6);
+    }
+
+    75% {
+        transform: scale(1.1);
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(13, 110, 53, 0.8);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+        text-shadow: 0 0 5px rgba(13, 110, 53, 0.5);
+    }
+}
+/* akhir preloader */
+
+/* navbar */
+.navbar-desktop {
+    width: 100%;
+    height: max-content;
+    background-color: #31c1a5; 
+}
+
+.isi-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.isi-navbar ul {
+    list-style: none;
+}
+
+.isi-navbar ul li {
+    display: inline;
+}
+
+.isi-navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    float: left;
+}
+
+.logo img {
+    width: 71px;
+    height: 71px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+    font-family: 'Source Serif Pro', serif;
+    padding-top: 1rem;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.menu-navbar {
+    padding-top: 1rem;
+    display: flex;
+}
+
+.menu-navbar ul {
+    display: flex;
+    gap: 5rem
+}
+
+.admin {
+    margin-right: 3rem;
+    width: 20px;
+    height: 20px;
+}
+
+.admin i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    padding: 50%;
+}
+
+/* navbar mobile */
+.navbar-mobile {
+    display: none;
+}
+
+/* akhir navbar mobile */

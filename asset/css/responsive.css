@@ -1,0 +1,153 @@
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        background-color: #31c1a5;
+        z-index: 999;
+        /* Biar di atas konten lain */
+    }
+
+    .isi-navbar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+        .isi-navbar-mobile a {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            margin-left: 5px;
+            font-weight: 600;
+        }
+
+    .logo-mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-mobile img {
+        width: 71px;
+        height: 71px;
+    }
+
+    /* hamburger */
+    .menu-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .menu-icon span {
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: white;
+        border-radius: 2px;
+        transition: 0.4s ease;
+        transform-origin: center;
+    }
+
+    .menu-icon.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-icon.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* akhir hamburger */
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+    .navbar-desktop {
+            display: none;
+        }
+    
+        .navbar-mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            background-color: #31c1a5;
+            z-index: 999;
+            /* Biar di atas konten lain */
+        }
+    
+        .isi-navbar-mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+    
+        .isi-navbar-mobile a {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            margin-left:5px;
+            font-weight: 600;
+        }
+    
+        .logo-mobile {
+            display: flex;
+            align-items: center;
+        }
+    
+        .logo-mobile img {
+            width: 71px;
+            height: 71px;
+        }
+    
+        /* hamburger */
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            padding: 5px;
+        }
+    
+        .menu-icon span {
+            display: block;
+            height: 4px;
+            width: 100%;
+            background-color: white;
+            border-radius: 2px;
+            transition: 0.4s ease;
+            transform-origin: center;
+        }
+    
+        .menu-icon.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+    
+        .menu-icon.active span:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .menu-icon.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+    
+        /* akhir hamburger */
+}
