@@ -3,13 +3,12 @@
     src: url('asset/sourceserifpro-bold.ttf') format('truetype');
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+::-webkit-scrollbar {}
 
 html:focus-within {
     scroll-behavior: smooth;
 }
+
 
 * {
     margin: 0;
@@ -417,19 +416,24 @@ html:focus-within {
         text-shadow: 0 0 5px rgba(13, 110, 53, 0.5);
     }
 }
+
 /* akhir preloader */
 
 /* navbar */
 .navbar-desktop {
     width: 100%;
     height: max-content;
-    background-color: #31c1a5; 
+    background-color: #31c1a5;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .isi-navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+
 }
 
 .isi-navbar ul {
@@ -467,21 +471,311 @@ html:focus-within {
 }
 
 .menu-navbar {
-    padding-top: 1rem;
+    padding-top: 2rem;
     display: flex;
+
 }
 
 .menu-navbar ul {
     display: flex;
-    gap: 5rem
+    gap: 3rem
 }
 
-.admin {
-    margin-right: 3rem;
-    width: 20px;
-    height: 20px;
+.tooltip2 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    z-index: 9999;
 }
 
+/* Underline animation */
+.tooltip2::before,
+.tooltip2::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 5px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.tooltip2::before {
+    left: 50%;
+}
+
+.tooltip2::after {
+    right: 50%;
+}
+
+.tooltip2:hover::before,
+.tooltip2:hover::after {
+    width: 50%;
+}
+
+/* Tooltip di bawah */
+.tooltiptext2 {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+    background-color: #009788;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip2:hover .tooltiptext2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext2::after {
+    content: "";
+    position: absolute;
+    top: -14.9px;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #009788 transparent;
+    transform: translateX(-50%);
+}
+
+/* akhir tooltip 1 */
+
+/* tooltip 2 */
+.tooltip3 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* Underline animation */
+.tooltip3::before,
+.tooltip3::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: 5px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.tooltip3::before {
+    left: 50%;
+}
+
+.tooltip3::after {
+    right: 50%;
+}
+
+.tooltip3:hover::before,
+.tooltip3:hover::after {
+    width: 50%;
+}
+
+/* Tooltip di bawah */
+.tooltiptext3 {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+    background-color: #009788;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip3:hover .tooltiptext3 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext3::after {
+    content: "";
+    position: absolute;
+    top: -14.9px;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #009788 transparent;
+    transform: translateX(-50%);
+}
+
+/* akhir tooltip 2 */
+
+/* tooltip3 */
+.tooltip4 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* Underline animation */
+.tooltip4::before,
+.tooltip4::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: 5px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.tooltip4::before {
+    left: 50%;
+}
+
+.tooltip4::after {
+    right: 50%;
+}
+
+.tooltip4:hover::before,
+.tooltip4:hover::after {
+    width: 50%;
+}
+
+/* Tooltip di bawah */
+.tooltiptext4 {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+    background-color: #009788;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+
+.tooltip4:hover .tooltiptext4 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext4::after {
+    content: "";
+    position: absolute;
+    top: -14.9px;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #009788 transparent;
+    transform: translateX(-50%);
+}
+
+/* akhir tooltip3 */
+
+/* tooltip 4 */
+.tooltip5 {
+    right: 4rem;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* Underline animation */
+.tooltip5::before,
+.tooltip5::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: 5px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.tooltip5::before {
+    left: 50%;
+}
+
+.tooltip5::after {
+    right: 50%;
+}
+
+.tooltip5:hover::before,
+.tooltip5:hover::after {
+    width: 50%;
+}
+
+/* Tooltip di bawah */
+.tooltiptext5 {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+    background-color: #009788;
+    color: white;
+    text-align: left;
+    border-radius: 5px;
+    padding: 10px;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+
+.tooltip5:hover .tooltiptext5 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltiptext5::after {
+    content: "";
+    position: absolute;
+    top: -14.9px;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #009788 transparent;
+    transform: translateX(-50%);
+}
+
+/* akhir tooltip 4 */
+
+/* admin */
 .admin i {
     width: 50px;
     height: 50px;
@@ -497,3 +791,396 @@ html:focus-within {
 }
 
 /* akhir navbar mobile */
+
+/* landing page */
+.landing-page {
+    position: relative;
+    width: 100%;
+}
+
+.landing-page .gambar2 {
+    width: 100%;
+}
+
+.landing-page .gambar3 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 12%;
+    z-index: 10;
+    left: 0;
+}
+
+.text-landing-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    text-align: center;
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.text-landing-page h1 {
+    background: linear-gradient(to right, #04baa7, #93e5fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.text-landing-page h2 {
+    background: linear-gradient(to right, #04baa7, #93e5fb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* tombol landing page */
+
+.text-landing-page button {
+    width: 218px;
+    height: 52px;
+    background-color: #31bca3;
+    border: none;
+    border-radius: 12px;
+    margin-inline: auto;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.text-landing-page button:hover {
+    color: black;
+    background-color: #66ff66;
+}
+
+.text-landing-page button i {
+    color: white;
+    margin-left: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.text-landing-page button:hover i {
+    rotate: 90deg;
+    color: black;
+}
+
+/* Ripple effect */
+.text-landing-page button .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    background-color: white;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* paralax efect */
+
+/* akhir landing page */
+
+/* lanyard */
+.dosen-pengampu {
+    width: 100%;
+    height: max-content;
+    background: linear-gradient(#31c1a5, white);
+    position: relative;
+    bottom: 3.8rem;
+}
+
+.header-dosen {
+    width: 100%;
+    height: 100%;
+
+}
+
+.header-dosen h1 {
+    text-align: center;
+
+    color: #fff;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+
+/* akhir lanyard */
+
+
+/* dosen */
+.pembungkus-dosen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.gambar-dosen {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    padding-left: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gambar-dosen1 {
+    position: absolute;
+    right: 0;
+    width: 1000px;
+    display: block;
+    left: 2rem;
+    overflow: hidden;
+}
+
+
+.gambar-dosen2 {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+}
+
+.teks-isi {
+    padding-inline: 2rem;
+    text-align: left;
+}
+
+/* contact */
+/* From Uiverse.io by svqantonio */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.up {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.down {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.instagram {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+}
+
+.card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.facebook {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #03A9F4;
+}
+
+.card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.whatsapp {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+    fill: #00ff00;
+}
+
+.card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+
+.gmail {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #f14336;
+}
+
+.card1:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+    fill: white;
+}
+
+.card2:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #1877f2;
+}
+
+.card2:hover .facebook {
+    fill: white;
+}
+
+.card3:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #00ff00;
+}
+
+.card3:hover .whatsapp {
+    fill: white;
+}
+
+.card4:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #FF0004;
+}
+
+.card4:hover .gmail {
+    fill: white;
+}
+
+/* akhir dosen */
+
+
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #009788;
+    color: #fff;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-size: 12px;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.tooltip2 {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #009788;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-size: 12px;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+button:hover .tooltip2 {
+    visibility: visible;
+    color: white;
+    opacity: 1;
+}
+
+.tooltip2::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-bottom: 6px solid #009788;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    clip-path: none;
+}
+
+/* Segitiga bawah tooltip */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #009788 transparent transparent transparent;
+}
+
+/* Tampilkan tooltip saat hover */
+button {
+    position: relative;
+}
+
+button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+button {
+    position: relative;
+}
+
+button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+/* akhir tooltip contact */
+/* akhir dosen pengampu */
+
+/* anggota kelompok */
