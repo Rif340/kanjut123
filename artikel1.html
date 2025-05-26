@@ -1,11 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kelompok5 - Artikel</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="asset/logo_kelompok5.png" />
+
+    <!-- boostrap 5 css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link href="asset/css/reset.css" rel="stylesheet">
+    <link href="asset/css/artikel1.css" rel="stylesheet">
+    <link href="asset/css/responsive-artikel.css" rel="stylesheet">
+
+    <!-- material icon google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios" />
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Flaticon UIcons CDN -->
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+
+        <!-- anyflip -->
+        <script src="//static.anyflip.com/plugin/LightBox/js/anyflp-light-box-api-min.js"></script>
 </head>
+
 <body>
-    <h1>Eror 404</h1>
+    <!-- navbar -->
+    <nav class="navbar-desktop">
+        <div class="isi-navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="asset/logo_kelompok5.png" alt="Logo" />
+                <a href="index.html">Kelompok 5</a>
+            </div>
+            <!-- <i class="fa-thin fa-user-graduate"></i> -->
+            <!-- Menu -->
+            <div class="menu-navbar" id="menuNavbar">
+                <ul>
+                    <li>
+                        <a href="#" class="tooltip2">Beranda<div class="tooltiptext2"><i class="bi bi-house-door"></i>
+                                Halaman Utama</div></a>
+                    </li>
+                    <a href="index.html#dosen-pengampu" class="tooltip3">Dosen Pengampu<div class="tooltiptext3"><i
+                                class="fi fi-ts-user-graduate"></i> Khalid Ramdhani, S.Pd.I., M.Pd.I</div></a>
+                    <li><a href="#anggota-kelompok" class="tooltip4">Anggota Kelompok<div class="tooltiptext4"><i
+                                    class="bi bi-person"></i> 1. Muhammad Arif Wicaksono<br><i class="bi bi-person"></i>
+                                2. Ale Awaludin Wahid<br><i class="bi bi-person"></i> 3. Shaka Alfarizi<br>
+                                <i class="bi bi-person"></i> 4. Muhammad Dafi<br>
+                    </li>
+                    <li><a href="artikel.html" class="tooltip5">Artikel<div class="tooltiptext5"><i
+                                    class="bi bi-easel"></i>
+                                Materi Presentasi</div></a></li>
+                </ul>
+            </div>
+
+            <!-- Admin -->
+            <div class="admin">
+                <i class="navbar-icon bi-person smoothscroll"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- navbar mobile -->
+    <nav class="navbar-mobile">
+        <div class="isi-navbar-mobile">
+            <!-- Logo -->
+            <div class="logo-mobile">
+                <img src="asset/logo_kelompok5.png" alt="Logo" />
+                <a href="index.html">Kelompok 5</a>
+            </div>
+
+            <div class="menu-icon" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+        </div>
+        <!-- overlay -->
+        <div class=" overlay"></div>
+
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="asset/logo_kelompok5.png" alt="Logo" />
+                <h1><strong>Kelompok 5</strong></h1>
+            </div>
+            <div class="nav-item">
+                <a href="#"></i>
+                    <i class="bi bi-house-door"></i>
+                    Beranda</a>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#dosen-pengampu"></i>
+                    <i class="fi fi-ts-user-graduate"></i>
+                    Dosen Pengampu</a>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#anggota-kelompok"></i>
+                    <i class="bi bi-person"></i>
+                    Anggota Kelompok</a>
+            </div>
+            <div class="nav-item">
+                <a href="artikel.html"></i>
+                    <i class="bi bi-easel"></i>
+                    Artikel</a>
+            </div>
+            <div class="icon-tambahan">
+
+            </div>
+            <button class="toggle-btn" id="closeSidebar"><i class="bi bi-arrow-bar-left"></i></button>
+        </div>
+        <!-- akhir sidebar -->
+    </nav>
+    <!-- akhir navbar mobile -->
+
+    <!-- artikel landing page -->
+    <div class="artikel">
+
+        <!-- awal artikel header -->
+        <div class="artikel-header">
+            <span class="halo2"><a href="index.html">Beranda</a> <i class="fa-solid fa-chevron-right"></i>
+                <a href="artikel.html">Artikel</a><i class="fa-solid fa-chevron-right"></i>
+                <p>Sumber Hukum Islam (Ijtihad)</p>
+            </span>
+        </div>
+        <!-- akhir artikel header -->
+
+        <!-- awal teks artikel -->
+        <div class="teks-artikel">
+            <div class="kategori">
+                <span>Artikel</span>
+                <span>Keislaman</span>
+                <span>Quran</span>
+                <span>Hukum</span>
+            </div>
+            <h1 class="judul-artikel">Sumber Ajaran Islam (Ijtihad)</h1>
+            <img src="asset/presentasi1.jpg" alt="Ijtihad" class="gambar-artikel">
+            <br>
+
+            <div class="penulis">
+                <img class="avatar" src="asset/avatar.jpg">
+                <span>Muhammad Shaka Alfarizy</span>
+                <span>•</span>
+                <span>26 Mei 2025</span>
+            </div>
+
+            <br>
+            <h2>Latar Belakang</h2>
+
+            <p>
+                <strong>Ijtihad </strong>adalah "proses ilmiah dalam hukum Islam untuk menetapkan hukum pada peristiwa
+                yang belum memiliki ketentuan jelas
+                dalam Al-Qur'an dan Hadis. Ijtihad memastikan hukum Islam tetap relevan dengan perkembangan zaman."
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Mujtahid </strong>adalah individu yang berkompeten melakukan analisis hukum secara mandiri
+                dengan berbagai kualifikasi, seperti pemahaman
+                mendalam terhadap Al-Qur'an, Hadis, dan kaidah fikih. Tingkatan mujtahid meliputi <i>mujtahid mutlak,
+                    mujtahid mazhab, dan mujtahid fatwa.</i>Kehadiran mujtahid yang kompeten menjaga fleksibilitas hukum
+                Islam tanpa menghilangkan esensi syariatnya.
+            </p>
+
+
+            <br>
+
+            <h2>Akal Pikiran (<i>Al-Ra’yu</i> atau <i>Ijtihād</i>)</h2>
+
+            <p>
+                <strong>Akal</strong> adalah sumber hukum Islam ketiga yang digunakan untuk memahami dan merumuskan
+                hukum berdasarkan kaidah fundamental
+                dalam Al-Qur’an dan Sunnah. Hubungan antara akal dan wahyu sangat erat; namun, wahyu memiliki kedudukan
+                yang lebih
+                tinggi dalam agama. Akal berfungsi sebagai kunci untuk memahami, sementara wahyu menjadi penuntun agar
+                akal tidak
+                menyimpang dari kebenaran.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Ijtihad</strong> berarti <i>"usaha maksimal untuk menetapkan hukum yang tidak dijelaskan secara
+                    eksplisit dalam Al-Qur’an dan Sunnah."</i>
+                Ijtihad merupakan bentuk pemanfaatan akal secara ilmiah dan sistematis dalam koridor wahyu.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Mujtahid</strong> adalah seseorang yang memenuhi syarat untuk melakukan ijtihad. Syarat-syarat
+                tersebut antara lain menguasai
+                <strong>bahasa Arab</strong>, memahami <strong>Al-Qur’an</strong> dan <strong>Hadis</strong>, menguasai
+                <strong>kaidah fikih</strong>, serta memiliki <strong>kejujuran</strong> dan <strong>keikhlasan</strong>
+                dalam
+                berijtihad.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Ijtihad</strong> terbagi menjadi <i>ijtihad</i> individual (<i>fardī</i>) dan ijtihad kolektif
+                (<i>jamā‘ī</i>). Pentingnya <i>ijtihad</i> terlihat dari
+                kemampuannya dalam membuat hukum Islam berkembang sesuai dengan kebutuhan masyarakat dari masa ke masa.
+                Melalui <i>ijtihad</i>,
+                hukum Islam tetap adaptif tanpa kehilangan esensi syariatnya.
+            </p>
+
+            <br>
+
+            <h2>Metode-Metode Berijtihad</h2>
+
+            <br>
+
+            <p><strong>Metode-metode</strong> berijtihad dalam hukum Islam memberikan fleksibilitas bagi umat Islam
+                dalam menghadapi berbagai persoalan
+                yang tidak secara eksplisit diatur dalam Al-Qur’an dan Sunnah. Berikut ini adalah penjelasan singkat
+                mengenai
+                metode-metode tersebut:
+            </p>
+
+            <br>
+
+            <h4>1. Ijmā‘ (Konsensus)</h4>
+
+            <p><strong>Ijmā‘</strong> adalah <i>"persetujuan atau kesepakatan para ulama mengenai suatu hukum pada suatu
+                    masa tertentu."</i> Ijmā‘ yang hakiki
+                terjadi pada masa awal Islam, ketika para sahabat Rasulullah ﷺ masih hidup dan dapat menyepakati suatu
+                permasalahan
+                secara kolektif. Pada masa kini, ijmā‘ lebih bersifat lokal atau terbatas, yaitu berupa kesepakatan di
+                antara para ulama
+                dalam suatu tempat atau komunitas tertentu. Meskipun demikian, ijmā‘ tetap menjadi salah satu metode
+                penting dalam
+                proses berijtihad, karena mencerminkan otoritas kolektif dalam penetapan hukum Islam.</p>
+
+            <br>
+
+            <h4>2. Qiyās (Analogi)</h4>
+            <p><strong>Qiyās</strong> adalah menetapkan hukum terhadap suatu perkara yang tidak memiliki ketentuan
+                eksplisit dalam Al-Qur’an maupun
+                Sunnah dengan cara menyamakannya dengan perkara lain yang memiliki persamaan <i>‘illat</i> (alasan
+                hukum). Dengan kata lain,
+                <i>qiyās</i> mengaitkan peristiwa baru dengan hukum yang telah ada berdasarkan kesamaan sebab hukumnya.
+                <br><br>
+                Contoh: Larangan terhadap semua jenis minuman yang memabukkan didasarkan pada <i>‘illat</i> yang sama
+                dengan larangan khamar,
+                yaitu efek memabukkan. Oleh karena itu, meskipun tidak disebutkan secara langsung, minuman lain yang
+                memabukkan juga
+                dihukumi haram melalui <i>qiyās.</i>
+            </p>
+            <br>
+            <h4>3. Istidal (Penarikan Kesimpulan)</h4>
+            <p>Menarik hukum dari adat istiadat yang tidak bertentangan dengan syariat atau dari hukum
+                agama sebelumnya yang tidak dihapus oleh Islam.</p>
+
+            <br>
+
+            <h4>4. Masalih al-Mursalah (Kemaslahatan Umum)</h4>
+
+            <p>Menetapkan hukum berdasarkan pertimbangan kemaslahatan masyarakat meskipun tidak
+                ada dalil eksplisit dalam Al-Qur''an dan Hadis. Contohnya adalah pembenaran pemungutan
+                pajak untuk kepentingan umum.</p>
+
+            <br>
+
+            <h4>5. Istihsan (Preferensi Hukum)</h4>
+
+            <p>Mengambil keputusan hukum yang lebih baik meskipun menyimpang dari analogi yang umum,
+                berdasarkan pertimbangan keadilan dan kemanfaatan. Contoh: Membolehkan jual beli dengan
+                sistem inden sesuai dengan kebiasaan masyarakat.</p>
+
+            <br>
+            <h4>6. Istishab (Kelangsungan Hukum)</h4>
+
+            <p>Melanjutkan hukum yang sudah ada sampai ada dalil yang membatalkannya. Contoh: Status
+                seseorang yang masih sebagai istri karena belum ada bukti perceraian.</p>
+
+            <br>
+
+            <h4>7.
+                ‘Urf(Adat Istiadat)</h4>
+
+            <p>Adat istiadat yang tidak bertentangan dengan hukum Islam dapat diakui sebagai hukum.
+                Contoh: Kebiasaan melamar dengan memberikan tanda pengikat atau pembayaran mahar secara cicilan.</p>
+
+            <br>
+
+            <h2>Hukum Islam dan Perkembangan Masyarakat</h2>
+
+            <p>Hukum Islam memiliki fleksibilitas untuk mengikuti perkembangan masyarakat yang dinamis
+                melalui berbagai metode ijtihad. Berikut poin-poin penting yang dapat disimpulkan dari
+                uraian tersebut:</p>
+
+            <br>
+
+            <h4>1. Fleksibilitas Hukum Islam</h4>
+
+            <p>Ijtihad yang dilakukan dengan metode yang baik dan benar memungkinkan hukum Islam
+                untuk terus relevan dan mampu menjawab berbagai persoalan baru yang timbul akibat
+                perkembangan zaman, ilmu pengetahuan, dan teknologi. Contohnya adalah masalah bayi
+                tabung dan transplantasi organ.</p>
+
+            <br>
+            <h4>2. Sifat Hukum Ilahi</h4>
+
+            <p>Hukum Allah meliputi seluruh ciptaan-Nya. Sebagian hukum tersurat dalam Al-Qur''an dan
+                As-Sunnah, namun ada pula yang tersirat atau tersembunyi, yang memerlukan kemampuan
+                manusia untuk menafsirkannya melalui ijtihad.</p>
+
+            <br>
+            <h4>3. Tujuan Hukum Ilahi</h4>
+
+            <p>Hukum-hukum Ilahi bertujuan untuk kemaslahatan manusia, baik berupa manfaat maupun
+                pencegahan mudarat. Pemahaman akan tujuan ini harus menjadi pedoman bagi para
+                mujtahid dalam menentukan hukum baru yang tidak secara eksplisit disebutkan dalam Al-
+                Qur''an atau As-Sunnah.</p>
+
+            <br>
+            <h4>4. Peran Mujtahid</h4>
+
+            <p>Mujtahid memiliki peran penting dalam menggali dan merumuskan hukum Islam yang sesuai dengan
+                kebutuhan masyarakat yang terus berkembang. Hal ini dilakukan dengan tetap berpegang pada prinsip
+                kemaslahatan manusia.</p>
+
+            <br>
+
+            <h4>5. Sumber Hukum Islam</h4>
+            <p>- Al-Qur''an : Sumber utama yang memuat kaidah-kaidah fundamental.</p>
+
+            <br>
+
+            <p>- As-Sunnah/Al-Hadis : Sumber kedua yang memberikan penjelasan rinci terutama mengenai ibadah.</p>
+
+            <br>
+
+            <p>- Akal Pikiran/Ijtihad : Sumber pengembangan hukum yang dilaksanakan melalui ijtihad, terutama
+                dalam aspek muamalah yang membutuhkan penyesuaian dengan perkembangan zaman.
+            </p>
+
+            <br>
+
+            <h2>Kesimpulan</h2>
+            <p>Ijtihad merupakan petunjuk hukum yang sangat penting dalam perumusan hukum Islam sebagai upaya
+                menjawab persoalan-persoalan kemanusiaan yang konkret serta penjabaran konsepsi Islam dalam segala
+                aspeknya. Selian itu, ijtihad adalah juga merupakan salah satu hal yang dalam menyelesaikan
+                permasalahan dalam hal kejumudan Islam dan ketaqlidan penganutnya Ruang lingkup permasalahan
+                yang boleh dijadikan lapangan ijtihad adalah mengenai hukum-hukum yang di dalamnya tidak ada nash
+                yang qath’i
+                <br><br>
+                Dasar penetapan ijtihad sebagai sumber hukum Islam adalah al-Qur’an dan al-Sunnah. Hal itu karena jika
+                dalam berijtihad dan di dalamnya terjadi perselisihan diperintahkan kembali merujuk kepada al-Qur’an
+                dan al-Sunnah. Seorang faqih yang akan melakukan ijtihad harus memenuhi kriteria tertentu untuk dapat
+                mencapai derajat mujtahid. Secara umum adalah: memahami ilmu al-Qur’an dan al-Sunnah serta nash-
+                nash hukum di dalamnya, mengetahui metode penemuan hukum, menguasai bahasa Arab, dan beberapa
+                syarat lainnya.
+            </p>
+
+            <br>
+
+            <h2>Makalah Kelompok 5</h2>
+            <img  class="pdf1" src='https://online.anyflip.com/eoybi/lpyt/files/shot.jpg' data-rel='fh5-light-box-demo'
+                data-href='https://online.anyflip.com/eoybi/lpyt/index.html' data-width='max-content' data-height='500'
+                data-title='Sumber Ajaran Islam'>
+
+            <a class="kembali" href="artikel.html"><i class="bi bi-chevron-left"></i>Kembali</a>
+        </div>
+        <!-- akhir teks artikel -->
+
+
+
+    </div>
+    <!-- akhir artikel -->
+
+    <!-- isi artikel -->
+
+
+    <!----Start Footer-->
+    <footer>
+        <div class="footer-container">
+            <div class="logo-section">
+                <img src="asset/logo_kelompok5.png" alt="HIMTIKA Logo" class="logo-footer">
+                <h3>Kelompok 5</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="footer-section section-1">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#dosen-pengampu">Dosen Pengampu</a></li>
+                        <li><a href="#anggota-kelompok">Anggota Kelompok</a></li>
+                        <li><a href="#artikel">Artikel</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section section-2">
+                    <h4>Materi</h4>
+                    <ul>
+                        <li><a href="artikel1.html">Presentasi 1</a></li>
+                        <li><a href="artikel2.html">Presentasi 2</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section section-3">
+                    <h4 id="teks1">About</h4>
+                    <ul class="halo">
+                        Webiste ini berfungsi sebagai pusat materi presentasi kami. Di sini, Anda dapat mengakses
+                        materi tentang Sumber Hukum Islam dan Ijtihad, serta Islam, Ilmu Pengetahuan, dan Teknologi.
+                        Situs ini juga menampilkan
+                        profil dosen pembimbing dan anggota kelompok kami.
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>Copyright &copy; 2025 Licensed, Registered and authorized by <a class="copyright-text"
+                    href="https://github.com/Rif340">Rif340.</a></p>
+            <div class="footer-logo-container">
+                <img src="asset/logo_kelompok5.png" alt="HIMTIKA Logo" class="footer-logo">
+                <p>Kelompok5 2025</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- script boostrap, animasi ,icon, dll -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/script.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/cc72c425a9.js" crossorigin="anonymous"></script>
+    <!-- script boostrap, animasi ,icon, dll -->
 </body>
+
 </html>

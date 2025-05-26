@@ -1,4 +1,13 @@
 @media screen and (min-width: 600px) and (max-width: 1024px) {
+  
+    .about-description {
+            padding-inline: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            justify-content: center;
+            text-align: center;
+            padding-top: 15rem;
+        }
+
     .navbar-desktop {
         display: none;
     }
@@ -218,6 +227,8 @@
         #teks1 {
             margin-top: 0;
         }
+
+              
 
 }
 
@@ -456,6 +467,8 @@
         padding-top: 1.5rem !important;
         padding-bottom: 1rem !important;
     }
+    
+        
 
     /* anggota kelompok */
     .about-title {

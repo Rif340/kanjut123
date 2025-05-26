@@ -1,11 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kelompok5 - Artikel</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="asset/logo_kelompok5.png" />
+
+    <!-- boostrap 5 css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link href="asset/css/reset.css" rel="stylesheet">
+    <link href="asset/css/artikel1.css" rel="stylesheet">
+    <link href="asset/css/responsive-artikel.css" rel="stylesheet">
+
+    <!-- material icon google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward_ios" />
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Flaticon UIcons CDN -->
+    <link rel='stylesheet'
+        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+
+    <!-- anyflip -->
+    <script src="//static.anyflip.com/plugin/LightBox/js/anyflp-light-box-api-min.js"></script>
 </head>
+
 <body>
-    <h1>Eror 404</h1>
+    <!-- navbar -->
+    <nav class="navbar-desktop">
+        <div class="isi-navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="asset/logo_kelompok5.png" alt="Logo" />
+                <a href="index.html">Kelompok 5</a>
+            </div>
+            <!-- <i class="fa-thin fa-user-graduate"></i> -->
+            <!-- Menu -->
+            <div class="menu-navbar" id="menuNavbar">
+                <ul>
+                    <li>
+                        <a href="#" class="tooltip2">Beranda<div class="tooltiptext2"><i class="bi bi-house-door"></i>
+                                Halaman Utama</div></a>
+                    </li>
+                    <a href="index.html#dosen-pengampu" class="tooltip3">Dosen Pengampu<div class="tooltiptext3"><i
+                                class="fi fi-ts-user-graduate"></i> Khalid Ramdhani, S.Pd.I., M.Pd.I</div></a>
+                    <li><a href="#anggota-kelompok" class="tooltip4">Anggota Kelompok<div class="tooltiptext4"><i
+                                    class="bi bi-person"></i> 1. Muhammad Arif Wicaksono<br><i class="bi bi-person"></i>
+                                2. Ale Awaludin Wahid<br><i class="bi bi-person"></i> 3. Shaka Alfarizi<br>
+                                <i class="bi bi-person"></i> 4. Muhammad Dafi<br>
+                    </li>
+                    <li><a href="artikel.html" class="tooltip5">Artikel<div class="tooltiptext5"><i
+                                    class="bi bi-easel"></i>
+                                Materi Presentasi</div></a></li>
+                </ul>
+            </div>
+
+            <!-- Admin -->
+            <div class="admin">
+                <i class="navbar-icon bi-person smoothscroll"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <!-- navbar mobile -->
+    <nav class="navbar-mobile">
+        <div class="isi-navbar-mobile">
+            <!-- Logo -->
+            <div class="logo-mobile">
+                <img src="asset/logo_kelompok5.png" alt="Logo" />
+                <a href="index.html">Kelompok 5</a>
+            </div>
+
+            <div class="menu-icon" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+
+        </div>
+        <!-- overlay -->
+        <div class=" overlay"></div>
+
+        <!-- sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="asset/logo_kelompok5.png" alt="Logo" />
+                <h1><strong>Kelompok 5</strong></h1>
+            </div>
+            <div class="nav-item">
+                <a href="index.html"></i>
+                    <i class="bi bi-house-door"></i>
+                    Beranda</a>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#dosen-pengampu"></i>
+                    <i class="fi fi-ts-user-graduate"></i>
+                    Dosen Pengampu</a>
+            </div>
+            <div class="nav-item">
+                <a href="index.html#anggota-kelompok"></i>
+                    <i class="bi bi-person"></i>
+                    Anggota Kelompok</a>
+            </div>
+            <div class="nav-item">
+                <a href="artikel.html"></i>
+                    <i class="bi bi-easel"></i>
+                    Artikel</a>
+            </div>
+            <div class="icon-tambahan">
+
+            </div>
+            <button class="toggle-btn" id="closeSidebar"><i class="bi bi-arrow-bar-left"></i></button>
+        </div>
+        <!-- akhir sidebar -->
+    </nav>
+    <!-- akhir navbar mobile -->
+
+    <!-- artikel landing page -->
+    <div class="artikel">
+
+        <!-- awal artikel header -->
+        <div class="artikel-header">
+            <span class="halo2"><a href="index.html">Beranda</a> <i class="fa-solid fa-chevron-right"></i>
+                <a href="artikel.html">Artikel</a><i class="fa-solid fa-chevron-right"></i>
+                <p>Sumber Hukum Islam (Ijtihad)</p>
+            </span>
+        </div>
+        <!-- akhir artikel header -->
+
+        <!-- awal teks artikel -->
+        <div class="teks-artikel">
+            <div class="kategori">
+                <span>Artikel</span>
+                <span>Keislaman</span>
+                <span>IPTEK</span>
+                <span>Teknologi</span>
+            </div>
+            <h1 class="judul-artikel">Islam, Ilmu Pengetahuan, dan Teknologi</h1>
+            <img src="asset/presentasi2.jpg" alt="Ijtihad" class="gambar-artikel">
+            <br>
+
+            <div class="penulis">
+                <img class="avatar" src="asset/avatar.jpg">
+                <span>Muhammad Dafi Ramadhan</span>
+                <span>•</span>
+                <span>26 Mei 2025</span>
+            </div>
+
+            <br>
+            <h2>Latar Belakang</h2>
+
+            <p>
+                Ilmu pengetahuan dan teknologi terus berkembang, membawa kemudahan dalam
+                berbagai aspek kehidupan, seperti komunikasi, transportasi, kesehatan, dan
+                pendidikan. Di balik kemajuan ini, muncul tantangan moral dan sosial yang
+                memerlukan panduan nilai agar tetap bermanfaat bagi umat manusia
+            </p>
+
+            <br>
+
+            <p>
+                Islam sebagai agama yang sempurna tidak hanya mengatur ibadah, tetapi juga
+                mendorong umatnya untuk berpikir kritis, menggali ilmu, dan memanfaatkan
+                teknologi secara bijak. Sejak masa kejayaan Islam, ilmuwan Muslim telah banyak
+                berkontribusi dalam perkembangan ilmu pengetahuan modern. Karena itu, penting
+                mengkaji kembali hubungan Islam dengan IPTEK, serta bagaimana integrasi
+                keduanya bisa menjawab tantangan zaman.
+
+            </p>
+
+
+            <br>
+
+            <h2>Pengertian Ilmu Pengetahuan dan Teknologi</h2>
+
+            <p>
+                Ilmu adalah kumpulan pengetahuan yang tersusun sistematis dan logis.
+                Pengetahuan bisa berasal dari akal sehat dan belum tentu empiris. Ilmu
+                pengetahuan merupakan integrasi dari keduanya dalam kerangka yang koheren.
+                Teknologi mencakup alat, mesin, dan metode untuk menerapkan teori. Jadi, IPTEK
+                adalah perpaduan teori, penerapan, dan alat untuk menciptakan perubahan ke
+                arah lebih baik.
+            </p>
+
+            <br>
+
+            <p>
+                Di negara maju, IPTEK terbukti meningkatkan produktivitas dan ekonomi. Namun,
+                di banyak negara berkembang, termasuk berpenduduk Muslim, pemanfaatannya
+                belum optimal. Islam sangat mendorong penguasaan IPTEK karena dengan ilmu,
+                manusia dapat memahami sejarah, etika, dan menjalankan tugas sebagai khalifah
+                secara bijak dan bertanggung jawab.
+
+            </p>
+
+            <br>
+
+            <h2>Sejarah perkembangan Ilmu Pengetahuan dan Teknologi dalam Peradaban Islam</h2>
+
+            <p>
+                Empat belas abad lalu, wahyu pertama (QS. Al-Alaq 1-5) mendorong manusia untuk
+                membaca dan menuntut ilmu selama tidak melanggar syariat. Islam sangat menghargai ilmu
+                pengetahuan dan teknologi (IPTEK), seperti yang terlihat dari banyak ayat Al-Qur’an yang
+                mengajak memanfaatkan nikmat Allah melalui pengembangan IPTEK. Pada masa keemasan
+                Dinasti Abbasiyah (abad ke-8 M), umat Islam berhasil mengembangkan ilmu melalui
+                penerjemahan karya Yunani dan Persia. Tokoh-tokoh seperti Al-Khawarizmi, Ibnu Sina,
+            </p>
+
+            <br>
+
+            <p>dan Al
+                Biruni membuat terobosan besar di bidang matematika, kedokteran, dan astronomi.
+                Kemajuan IPTEK Islam juga terlihat dalam pertanian dengan sistem irigasi maju, serta karya
+                arsitektur monumental seperti Masjid Agung Cordoba dan Istana Al-Hambra. Kesuksesan ini
+                didasari oleh iman dan takwa, menjadikan sains sebagai perpaduan antara logika dan etika
+                spiritual. Kini, generasi muda Islam dituntut untuk memahami ayat qauliyah (wahyu) dan
+                kauniyah (alam semesta) agar mampu mengembangkan IPTEK yang beradab dan
+                bermartabat.
+            </p>
+
+            <br>
+
+            <h2>Tokoh-Tokoh Muslim dalam Perkembangan Ilmu Pengetahuan dan Teknologi
+            </h2>
+
+            <p>Muhammad ibn Musa Al-Khawarizmi : Bapak aljabar, perkenalkan konsep aljabar lewat
+                bukunya Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala. Istilah algorithm berasal
+                dari namanya. Karyanya jadi dasar matematika modern di Eropa.</p>
+
+            <br>
+
+            <p>Ibn Sina (Avicenna) : Tokoh besar kedokteran, penulis Al-Qanun fi al-Tibb yang jadi
+                literatur standar selama 600 tahun. Pendekatan rasional dan sistematis dalam diagnosisdan pengobatan.
+            </p>
+
+            <br>
+
+            <p>Ibn al-Haytham (Alhazen) : Pelopor metode ilmiah modern di optik dan fisika. Bukunya
+                Kitab al-Manazir jelaskan cahaya dan penglihatan dengan eksperimen dan observasi.</p>
+
+            <br>
+
+            <p>Jabir ibn Hayyan : Bapak kimia modern, temukan teknik destilasi, kristalisasi, sublimasi.
+                Menulis 100+ karya tentang kimia dan alkimia.</p>
+
+            <br>
+
+            <p>Al-Biruni : Ilmuwan multidisiplin di astronomi, geografi, dan sejarah. Menghitung diameter
+                bumi dengan akurat.
+            </p>
+
+            <br>
+
+            <h2>Pandangan Islam terhadap Perkembangan Ilmu Pengetahuan dan Teknologi</h2>
+
+            <p>
+                Al-Qur’an mendorong manusia berpikir dan mencari ilmu, seperti dalam wahyu pertama
+                QS. Al-‘Alaq (1-5) yang memerintahkan membaca.
+            </p>
+
+            <br>
+
+            <p>Menuntut ilmu adalah kewajiban bagi setiap Muslim (HR. Ibnu Majah).</p>
+
+            <br>
+
+            <p>Ilmu bukan hanya untuk materi, tapi sarana mengenal Allah dan memperbaiki kehidupan.</p>
+
+            <br>
+
+            <p>Teknologi adalah amanah yang harus dipakai untuk kemaslahatan umat.</p>
+
+            <br>
+
+            <p>Islam menekankan akhlak dan etika dalam penggunaan ilmu dan teknologi agar tidak merusak.</p>
+
+            <br>
+
+            <p>
+                Ilmu agama dan ilmu dunia dipelajari bersamaan sebagai kesatuan holistik.
+                Islam memperingatkan bahaya teknologi tanpa nilai moral, seperti kecerdasan buatan dan
+                senjata pemusnah.
+            </p>
+
+            <br>
+
+            <p>Tujuan IPTEK dalam Islam adalah membangun kehidupan yang adil dan beradab, bukan
+                eksploitasi ataukehancuran.</p>
+
+            <br>
+
+            <p>Ilmu dan teknologi harus berkembang berdasarkan nilai ketuhanan, kemanusiaan, dan
+                tanggung jawab sosial.</p>
+
+            <br>
+
+            <p>Integrasi iman dan akal adalah ciri khas peradaban Islam yang beradab dan berilmu.
+            </p>
+
+            <br>
+
+            <h2>Tantangan dan Strategi Umat Islam Indonesia dalam Menghadapi Perkembangan IPTEK di Era Society 5.0</h2>
+
+            <h4>1. Era Society 5.0 dan Tantangannya</h4>
+            <p>Society 5.0: konsep Jepang yang menggabungkan teknologi canggih (AI, IoT, big data)
+                dengan kebutuhan manusia untuk menyelesaikan masalah sosial dan ekonomi.</p>
+
+            <br>
+
+            <p>Tantangan utama: ketimpangan akses teknologi digital, terutama di daerah pedesaan dantertinggal.</p>
+
+            <br>
+
+            <p>Contoh: Aceh sudah tingkat melek huruf tinggi (98,34%), tapi akses bahan bacaan dan
+                teknologi masih terbatas → literasi digital rendah → kesenjangan digital.</p>
+
+            <br>
+
+            <p>SDM Indonesia belum sepenuhnya siap menghadapi disrupsi teknologi, banyak pengguna
+                internet masih konsumtif.</p>
+
+            <br>
+
+            <h4>2. Upaya Pemerintah Indonesia</h4>
+            <p>Pembangunan infrastruktur digital di 12.000 desa tertinggal.</p>
+
+            <br>
+
+            <p>
+                Program Digital Talent Scholarship untuk melatih SDM unggul di bidang AI, keamanan
+                siber, data science, cloud computing.
+
+            </p>
+
+            <br>
+
+            <h2>Strategi Umat Islam Indonesia dalam Menghadapi Society 5.0</h2>
+
+            <p>1. Literasi Digital Berbasis Masjid dan Pesantren Mengembangkan pelatihan teknologi
+                berbasis komunitas Muslim agar masyarakat dapat memanfaatkan teknologi secara
+                produktif dan Islami.</p>
+
+            <br>
+
+            <p> 2. Kurikulum Terpadu IPTEK dan Aqidah Menyusun modul pembelajaran yang menyatukan
+                ilmu pengetahuan modern dengan prinsip-prinsip akidah dan akhlak.</p>
+
+            <br>
+
+            <p>3. Pelatihan Dai Digital dan Guru IPTEK Menyiapkan para dai, ustaz, dan guru agar fasih
+                menggunakan platform digital untuk menyampaikan dakwah dan ilmu secara efektif.</p>
+
+            <br>
+
+            <p>4. Fatwa dan Etika Digital Islami Mendorong Majelis Ulama Indonesia (MUI) dan ormas Islam
+                untuk merumuskan panduan etika digital Islami di tengah arus hoaks, konten negatif, dan
+                eksploitasi data.</p>
+
+            <br>
+
+            <p>5. Kolaborasi Lintas Sektor Membangun sinergi antara lembaga dakwah, universitas Islam,
+                dan kementerian terkait dalam mengembangkan riset-riset IPTEK berbasis maqashid
+                syariah.
+            </p>
+
+            <h2>Kesimpulan</h2>
+            <p>Ilmu Pengetahuan dan Teknologi (IPTEK) merupakan fondasi penting dalam membangun
+                peradaban manusia. IPTEK tidak hanya mencakup penguasaan teori dan teknologi, tetapi juga
+                penerapan nilai-nilai moral dan spiritual. Dalam Islam, IPTEK dipandang sebagai bagian dari
+                amanah dan sarana untuk mengenal serta mendekatkan diri kepada Allah SWT.</p>
+
+            <br>
+
+            <p>
+                Perkembangan IPTEK dalam sejarah Islam menunjukkan bahwa umat Muslim memiliki
+                kontribusi besar terhadap kemajuan sains dunia, dengan lahirnya banyak ilmuwan besar
+                seperti Al-Khawarizmi, Ibn Sina, dan Al-Biruni. Mereka membuktikan bahwa ilmu dan agama
+                dapat berjalan seiring, saling memperkuat, dan mendorong kemajuan umat.
+            </p>
+            <br>
+
+            <p>Islam menekankan pentingnya penguasaan ilmu pengetahuan dan teknologi dalam kerangka
+                iman dan etika. Ilmu yang dikembangkan tanpa nilai moral dapat membawa kerusakan,
+                sementara ilmu yang disertai akhlak akan menjadi berkah bagi umat manusia. Oleh karena itu,
+                umat Islam masa kini, khususnya generasi muda, perlu mengintegrasikan nilai-nilai Al-Qur’an
+                dan pengetahuan alam untuk menciptakan IPTEK yang beradab dan bermanfaat bagi dunia</p>
+            <h2>Makalah Kelompok 5</h2>
+
+            <img src='https://online.anyflip.com/eoybi/dyii/files/shot.jpg' data-rel='fh5-light-box-demo'
+                data-href='https://online.anyflip.com/eoybi/dyii/index.html' data-width='max-content' data-height='500'
+                data-title='Islam, Ilmu Pengetahuan, Teknologi'>
+
+            <a class="kembali" href="artikel.html"><i class="bi bi-chevron-left"></i>Kembali</a>
+        </div>
+        <!-- akhir teks artikel -->
+
+
+
+    </div>
+    <!-- akhir artikel -->
+
+    <!-- isi artikel -->
+
+
+    <!----Start Footer-->
+    <footer>
+        <div class="footer-container">
+            <div class="logo-section">
+                <img src="asset/logo_kelompok5.png" alt="HIMTIKA Logo" class="logo-footer">
+                <h3>Kelompok 5</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-text">
+                <div class="footer-section section-1">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#dosen-pengampu">Dosen Pengampu</a></li>
+                        <li><a href="#anggota-kelompok">Anggota Kelompok</a></li>
+                        <li><a href="#artikel">Artikel</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section section-2">
+                    <h4>Materi</h4>
+                    <ul>
+                        <li><a href="artikel1.html">Presentasi 1</a></li>
+                        <li><a href="artikel2.html">Presentasi 2</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section section-3">
+                    <h4 id="teks1">About</h4>
+                    <ul class="halo">
+                        Webiste ini berfungsi sebagai pusat materi presentasi kami. Di sini, Anda dapat mengakses
+                        materi tentang Sumber Hukum Islam dan Ijtihad, serta Islam, Ilmu Pengetahuan, dan Teknologi.
+                        Situs ini juga menampilkan
+                        profil dosen pembimbing dan anggota kelompok kami.
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr>
+            <p>Copyright &copy; 2025 Licensed, Registered and authorized by <a class="copyright-text"
+                    href="https://github.com/Rif340">Rif340.</a></p>
+            <div class="footer-logo-container">
+                <img src="asset/logo_kelompok5.png" alt="HIMTIKA Logo" class="footer-logo">
+                <p>Kelompok5 2025</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- script boostrap, animasi ,icon, dll -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/script.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/cc72c425a9.js" crossorigin="anonymous"></script>
+    <!-- script boostrap, animasi ,icon, dll -->
 </body>
+
 </html>
