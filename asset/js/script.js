@@ -85,10 +85,10 @@ window.addEventListener("scroll", function () {
 
 // anggota kelompok
 const teamMembers = [
-    { name: "Arif", role: "2A Informatika" },
-    { name: "Shaka", role: "2A Informatika" },
-    { name: "Dafi", role: "2A Informatika" },
-    { name: "Ale", role: "2A Informatika" }
+    { name: "Arif", role: "Developer" },
+    { name: "Shaka", role: "Peneliti & Penulis Konten" },
+    { name: "Dafi", role: "Desainer UI/UX" },
+    { name: "Ale", role: "Editor & Pengembang Konten" }
 ];
 
 const cards = document.querySelectorAll(".card");

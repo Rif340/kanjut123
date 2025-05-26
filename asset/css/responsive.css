@@ -193,6 +193,32 @@
         color: #0b9388;
     }
 
+        /* =============== section Footer ================ */
+                .footer-container {
+                    flex-wrap: wrap;
+                }
+        
+                .footer-text {
+                    flex-wrap: wrap;
+                    display: flex !important;
+                    position: relative;
+                    justify-content: space-between;
+                    padding-inline:6rem;
+                    column-gap:8rem !important;
+                }
+    
+        .logo-section {
+            margin-left: 0px !important;
+        }
+    
+        .section-3 {
+            padding-bottom: 1rem!important;
+        }
+    
+        #teks1 {
+            margin-top: 0;
+        }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
@@ -739,7 +765,7 @@
 } */
     .artikel {
         padding-top: 8rem;
-        height: 115vh;
+        height: 120vh;
     }
 
     .isi-artikel::before,
@@ -758,4 +784,27 @@
         font-size: 2.4rem;
         text-align: center;
     }
+
+        /* =============== section Footer ================ */
+        .footer-container{
+            flex-wrap: wrap;
+        }
+        .footer-text {
+            flex-wrap: wrap;
+            display: flex !important;
+            position: relative;
+            gap:1rem;
+        }
+    
+        .logo-section {
+            margin-left: 0px !important;
+        }
+    
+        .section-3 {
+            margin-top: -0px !important;
+        }
+    
+        #teks1 {
+            margin-top: 0;
+        }
 }
