@@ -10,7 +10,7 @@
     <link rel="icon" href="asset/logo_kelompok5.png" />
 
     <!-- boostrap 5 css -->
-    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+
 
     <!-- css -->
     <link href="asset/css/reset.css" rel="stylesheet">
@@ -109,12 +109,12 @@
                     Dosen Pengampu</a>
             </div>
             <div class="nav-item">
-                <a href="#"></i>
+                <a href="#anggota-kelompok"></i>
                     <i class="bi bi-person"></i>
                     Anggota Kelompok</a>
             </div>
             <div class="nav-item">
-                <a href="#"></i>
+                <a href="#artikel"></i>
                     <i class="bi bi-easel"></i>
                     Artikel</a>
             </div>
@@ -140,7 +140,7 @@
             <h1 class="judul">Selamat <br>Datang di</h1>
             <h2 class="subjudul">Kelompok 5 - 2A Informatika</h2>
             <p class="deskripsi">Pendidikan Agama Islam</p>
-            <button onclick="document.getElementById('slide1').scrollIntoView({ behavior: 'smooth' });">Lihat Artikel<i
+            <button onclick="document.getElementById('artikel').scrollIntoView({ behavior: 'smooth' });">Lihat Artikel<i
                     class="bi bi-arrow-right-circle"></i></button>
         </div>
     </div>
@@ -149,12 +149,12 @@
     <!-- Dosen pengampu-->
     <div class="dosen-pengampu" id="dosen-pengampu">
         <div class="header-dosen">
-            <h1 class="judul-dosen">Dosen Pengampu</h1>
+            <h1 class="judul-dosen">Dosen <br>Pengampu</h1>
         </div>
         <div class="pembungkus-dosen">
             <div class="gambar-dosen">
-                <img class="gambar-dosen1" src="./asset/background4.png">
-                <img class="gambar-dosen2" src="./asset/pak_khalid.png">
+                <img class="gambar-dosen1" src="asset/background4.png">
+                <img class="gambar-dosen2" src="asset/pak_khalid.png">
             </div>
 
             <div class="teks-isi">
@@ -229,13 +229,97 @@
     <!-- akhir dosen pengampu -->
 
     <!-- anggota kelompok -->
-     <!--  -->
+    <div class="anggota-kelompok" id="anggota-kelompok">
+        <h1 class="about-title">Team Kelompok</h1>
 
+        <div class="carousel-container">
+            <button class="nav-arrow left">‹</button>
+            <div class="carousel-track">
+                <div class="card" data-index="0">
+                    <div class="wrapper">
+                        <img src="asset/arif.png" class="cover-image" />
+                    </div>
+                    <img src="asset/teks_arif.png" class="title" />
+                    <img src="asset/arif2.png" class="character" />
+                </div>
 
+                <div class="card" data-index="1">
+                    <div class="wrapper">
+                        <img src="asset/shaka.png" class="cover-image" />
+                    </div>
+                    <img src="asset/teks_shaka.png" class="title" />
+                    <img src="asset/shaka2.png" class="character" />
+                </div>
+
+                <div class="card" data-index="2">
+                    <div class="wrapper">
+                        <img src="asset/dafi.png" class="cover-image" />
+                    </div>
+                    <img src="asset/teks_dafi.png" class="title" />
+                    <img src="asset/dafi2.png" class="character" />
+                </div>
+
+                <div class="card" data-index="3">
+                    <div class="wrapper">
+                        <img src="asset/ale.png" class="cover-image" />
+                    </div>
+                    <img src="asset/teks_ale.png" class="title" />
+                    <img src="asset/ale2.png" class="character" />
+                </div>
+            </div>
+            <button class="nav-arrow right">›</button>
+        </div>
+
+        <div class="member-info">
+            <h2 class="member-name">Arif</h2>
+            <p class="member-role">Developer</p>
+        </div>
+
+        <div class="dots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+            <div class="dot" data-index="3"></div>
+        </div>
+        <!-- akhir pembungkus paling luar -->
+    </div>
+    <!-- akhir anggota kelompok -->
+
+    <!-- artikel -->
+    <div class="artikel" id="artikel">
+        <h1>Artikel <br>Materi Kelompok 5</h1>
+        <div class="isi-artikel" id="scrollArea">
+            <div class="scroll-wrapper" id="scrollContent">
+                <a href="artikel1.html">
+                    <img src="asset/presentasi1.jpg">
+                </a>
+                <a href="artikel2.html">
+                    <img src="asset/presentasi2.jpg">
+                </a>
+                <!-- Duplikat untuk efek loop -->
+                <a href="artikel1.html">
+                    <img src="asset/presentasi1.jpg">
+                </a>
+                <a href="artikel2.html">
+                    <img src="asset/presentasi2.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- akhir artikel -->
+
+    <!-- footer -->
+    <div class="footer">
+        <p class="copyright-text">Copyright &copy; 2025 <a href="https://github.com/Rif340">Rif340.</a> All Rights Reserved.</p>
+    </div>
+    <!-- akhir footer -->
+
+    <!-- script boostrap, animasi ,icon, dll -->
     <script src="asset/js/bootstrap.bundle.min.js"></script>
     <script src="asset/js/script.js"></script>
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/cc72c425a9.js" crossorigin="anonymous"></script>
+    <!-- script boostrap, animasi ,icon, dll -->
 </body>
 
 </html>

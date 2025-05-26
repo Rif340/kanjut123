@@ -3,7 +3,34 @@
     src: url('asset/sourceserifpro-bold.ttf') format('truetype');
 }
 
-::-webkit-scrollbar {}
+/* Scrollbar styling (opsional, untuk tampilan yang lebih bersih) */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #31c1a5;
+}
+
+/* Untuk mengatur warna sorotan secara global */
+::selection {
+    background-color: orange;
+    /* Warna hijau tema Anda untuk latar belakang sorotan */
+    color: white;
+    padding:50px;
+    /* Warna putih untuk teks yang disorot */
+}
+
+
 
 html:focus-within {
     scroll-behavior: smooth;
@@ -473,7 +500,7 @@ html:focus-within {
 .menu-navbar {
     padding-top: 2rem;
     display: flex;
-
+    font-family: Arial, sans-serif;
 }
 
 .menu-navbar ul {
@@ -838,9 +865,15 @@ html:focus-within {
     -webkit-text-fill-color: transparent;
 }
 
+.text-landing-page p{
+    font-family: Arial, sans-serif;
+    padding-block:1rem;
+
+}
 /* tombol landing page */
 
 .text-landing-page button {
+    font-family: Arial, sans-serif;
     width: 218px;
     height: 52px;
     background-color: #31bca3;
@@ -914,7 +947,8 @@ html:focus-within {
 
 .header-dosen h1 {
     text-align: center;
-
+    font-size:4rem;
+    font-weight:700;
     color: #fff;
     padding-top: 6rem;
     padding-bottom: 5rem;
@@ -960,11 +994,15 @@ html:focus-within {
 
 .teks-isi {
     padding-inline: 2rem;
+    font-family: Arial, sans-serif;
     text-align: left;
 }
 
+.teks-isi h2, .teks-isi h1, .teks-isi p{
+    margin-bottom:1rem;
+}
+
 /* contact */
-/* From Uiverse.io by svqantonio */
 .main {
     display: flex;
     flex-direction: column;
@@ -1184,3 +1222,443 @@ button:hover .tooltip {
 /* akhir dosen pengampu */
 
 /* anggota kelompok */
+:root {
+    --card-height: 400px;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+.anggota-kelompok {
+    min-height: max-content;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( white, #31c1a5) no-repeat center/cover;
+    overflow: hidden;
+    position: relative;
+    padding-top: 9rem;
+    box-sizing: border-box;
+    padding-bottom:2rem;
+}
+
+.about-title {
+    font-size: 7.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    background: linear-gradient(to bottom,
+                rgb(8 42 123 / 35%) 30%,
+                rgb(255 255 255 / 0%) 76%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    pointer-events: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 1;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 450px;
+    position: relative;
+    perspective: 1000px;
+    margin-top: 80px;
+}
+
+.carousel-track {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Original 3D hover card styles */
+.card {
+    position: absolute;
+    width: var(--card-width);
+    height: var(--card-height);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    border-radius: 5px;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+}
+
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(to top,
+            transparent 46%,
+            rgba(12, 13, 19, 0.5) 68%,
+            rgba(12, 13, 19) 97%);
+    border-radius: 5px;
+}
+
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(to bottom,
+            transparent 46%,
+            rgba(12, 13, 19, 0.5) 68%,
+            rgba(12, 13, 19) 97%);
+    border-radius: 5px;
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 120px;
+}
+
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+
+/* Carousel positioning classes */
+.card.center {
+    z-index: 10;
+    transform: scale(1.1) translateZ(0);
+}
+
+.card.center .cover-image {
+    filter: none;
+}
+
+.card.left-2 {
+    z-index: 1;
+    transform: translateX(-400px) scale(0.8) translateZ(-300px);
+    opacity: 0.7;
+}
+
+.card.left-2 .cover-image {
+    filter: grayscale(100%);
+}
+
+.card.left-1 {
+    z-index: 5;
+    transform: translateX(-200px) scale(0.9) translateZ(-100px);
+    opacity: 0.9;
+}
+
+.card.left-1 .cover-image {
+    filter: grayscale(100%);
+}
+
+.card.right-1 {
+    z-index: 5;
+    transform: translateX(200px) scale(0.9) translateZ(-100px);
+    opacity: 0.9;
+}
+
+.card.right-1 .cover-image {
+    filter: grayscale(100%);
+}
+
+.card.right-2 {
+    z-index: 1;
+    transform: translateX(400px) scale(0.8) translateZ(-300px);
+    opacity: 0.7;
+}
+
+.card.right-2 .cover-image {
+    filter: grayscale(100%);
+}
+
+.card.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Preserve 3D hover effects for center card */
+.card.center:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0) scale(1.1);
+}
+
+.member-info {
+    text-align: center;
+    margin-top: 40px;
+    transition: all 0.5s ease-out;
+}
+
+.member-name {
+    color: rgb(8, 42, 123);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.member-name::before,
+.member-name::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100px;
+    height: 2px;
+    background: rgb(8, 42, 123);
+}
+
+.member-name::before {
+    left: -120px;
+}
+
+.member-name::after {
+    right: -120px;
+}
+
+.member-role {
+    color: #848696;
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 10px 0;
+    margin-top: -15px;
+    position: relative;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 60px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(8, 42, 123, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: rgb(8, 42, 123);
+    transform: scale(1.2);
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(8, 42, 123, 0.6);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding-bottom: 4px;
+}
+
+.nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+   
+}
+
+.nav-arrow.left {
+    left: 20px;
+    padding-right: 3px;
+}
+
+.nav-arrow.right {
+    right: 20px;
+    padding-left: 3px;
+}
+
+/* akhir anggota kelompok */
+
+/* artikel */
+.artikel {
+    width: 100%;
+    height: 150vh;
+    background: linear-gradient(#31c1a5, #31c1a5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top:9rem;
+}
+
+.artikel h1 {
+    margin-bottom: 5rem;
+    font-size:5rem;
+    text-align:center;
+    color:white;
+}
+
+.isi-artikel {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-wrapper {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    animation: scroll-horizontal 15s linear infinite;
+}
+
+.scroll-wrapper img {
+    width: 800px;
+    height: 500px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Efek bayangan kanan-kiri */
+.isi-artikel::before,
+.isi-artikel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.isi-artikel::before {
+    left: 0;
+    background: linear-gradient(to right, #31c1a5, rgba(49, 193, 165, 0));
+}
+
+.isi-artikel::after {
+    right: 0;
+    background: linear-gradient(to left, #31c1a5, rgba(49, 193, 165, 0));
+}
+
+/* Animasi scroll */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause saat hover */
+.pause {
+    animation-play-state: paused !important;
+}
+/* akhir artikel */
+
+/* footer */
+.footer{
+    width:100%;
+    height:max-content;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-block:1rem;
+    background-color:#1d7463;
+    font-family: Arial, sans-serif;
+}
+
+.copyright-text{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color:white;
+    text-decoration: none;
+}
+
+.copyright-text a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* akhir footer */
